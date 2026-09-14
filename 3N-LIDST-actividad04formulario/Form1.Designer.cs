@@ -39,11 +39,11 @@
             this.tbxEstatura = new System.Windows.Forms.TextBox();
             this.tbxEdad = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbHombre = new System.Windows.Forms.RadioButton();
-            this.rbMujer = new System.Windows.Forms.RadioButton();
             this.rbOtros = new System.Windows.Forms.RadioButton();
+            this.rbMujer = new System.Windows.Forms.RadioButton();
+            this.rbHombre = new System.Windows.Forms.RadioButton();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,16 +140,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Genero";
             // 
-            // rbHombre
+            // rbOtros
             // 
-            this.rbHombre.AutoSize = true;
-            this.rbHombre.Location = new System.Drawing.Point(7, 32);
-            this.rbHombre.Name = "rbHombre";
-            this.rbHombre.Size = new System.Drawing.Size(77, 20);
-            this.rbHombre.TabIndex = 0;
-            this.rbHombre.TabStop = true;
-            this.rbHombre.Text = "Hombre";
-            this.rbHombre.UseVisualStyleBackColor = true;
+            this.rbOtros.AutoSize = true;
+            this.rbOtros.Location = new System.Drawing.Point(227, 32);
+            this.rbOtros.Name = "rbOtros";
+            this.rbOtros.Size = new System.Drawing.Size(60, 20);
+            this.rbOtros.TabIndex = 2;
+            this.rbOtros.TabStop = true;
+            this.rbOtros.Text = "Otros";
+            this.rbOtros.UseVisualStyleBackColor = true;
             // 
             // rbMujer
             // 
@@ -162,16 +162,16 @@
             this.rbMujer.Text = "Mujer";
             this.rbMujer.UseVisualStyleBackColor = true;
             // 
-            // rbOtros
+            // rbHombre
             // 
-            this.rbOtros.AutoSize = true;
-            this.rbOtros.Location = new System.Drawing.Point(227, 32);
-            this.rbOtros.Name = "rbOtros";
-            this.rbOtros.Size = new System.Drawing.Size(60, 20);
-            this.rbOtros.TabIndex = 2;
-            this.rbOtros.TabStop = true;
-            this.rbOtros.Text = "Otros";
-            this.rbOtros.UseVisualStyleBackColor = true;
+            this.rbHombre.AutoSize = true;
+            this.rbHombre.Location = new System.Drawing.Point(7, 32);
+            this.rbHombre.Name = "rbHombre";
+            this.rbHombre.Size = new System.Drawing.Size(77, 20);
+            this.rbHombre.TabIndex = 0;
+            this.rbHombre.TabStop = true;
+            this.rbHombre.Text = "Hombre";
+            this.rbHombre.UseVisualStyleBackColor = true;
             // 
             // btnGuardar
             // 
@@ -181,15 +181,17 @@
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnCancelar
+            // btnLimpiar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(470, 150);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 12;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Location = new System.Drawing.Point(470, 150);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiar.TabIndex = 12;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // Form1
             // 
@@ -197,7 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tbxEdad);
@@ -236,7 +238,7 @@
         private System.Windows.Forms.RadioButton rbMujer;
         private System.Windows.Forms.RadioButton rbHombre;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 
